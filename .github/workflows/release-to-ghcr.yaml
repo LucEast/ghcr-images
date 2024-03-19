@@ -10,9 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.2
 
-      - name: Get branch names
-        uses: tj-actions/branch-names@v8
-        id: branch-names
+      # - name: Get branch names
+      #   uses: tj-actions/branch-names@v8
+      #   id: branch-names
+      - run: echo "Name ${{ github.event.release.name }}"
 
       - uses: docker/metadata-action@v5.5.1
         id: metadata
